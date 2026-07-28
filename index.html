@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gulf of Finland marine routing intelligence and printable report">
+  <title>SeaRoute Finland — Marine Routing Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="SeaRoute home"><span class="brand-mark">S</span><span>SeaRoute <b>Finland</b></span></a>
+    <nav aria-label="Primary"><a class="active" href="#overview">Overview</a><a href="#conditions">Conditions</a><a href="#fleet">Fleet</a><a href="#sources">Data sources</a></nav>
+    <button class="download" type="button" data-print><span>↓</span> Download full report</button>
+  </header>
+
+  <main>
+    <section class="hero" id="overview">
+      <div>
+        <div class="eyebrow"><span></span> GULF OF FINLAND · ROUTING INTELLIGENCE</div>
+        <h1>Safer routes.<br><em>Smarter decisions.</em></h1>
+        <p class="lede">A unified view of weather, waves, currents, ice and vessel traffic—built for seasonal planning and short-horizon operations.</p>
+        <div class="hero-actions"><a class="primary" href="#conditions">Explore conditions <span>→</span></a><button class="text-button" type="button" data-print>View full methodology ↗</button></div>
+        <div class="metrics">
+          <div><strong>5 km</strong><span>Grid resolution</span></div>
+          <div><strong>4</strong><span>Vessel profiles</span></div>
+          <div><strong>6+</strong><span>Open data feeds</span></div>
+        </div>
+      </div>
+      <div class="map-card" aria-label="Illustrative Gulf of Finland route map">
+        <div class="map-head"><div><span class="status-dot"></span> STUDY AREA</div><b>Gulf of Finland</b></div>
+        <svg viewBox="0 0 680 455" role="img" aria-label="Map with Hanko, Helsinki, Sköldvik and HaminaKotka routes">
+          <defs><pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#cdd9d5" stroke-width=".7"/></pattern><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+          <rect width="680" height="455" fill="#eaf0ed"/><rect width="680" height="455" fill="url(#grid)"/>
+          <path class="land" d="M0 0H680V103c-48 19-77 8-117 28-30 15-46 53-86 50-41-3-62-39-100-30-50 12-58 69-112 80-49 10-74-23-120-8-46 15-60 63-145 54Z"/>
+          <path class="land" d="M0 430c72-22 106-5 151-23 61-25 86-75 150-75 72 0 105 40 174 22 60-16 101-60 205-42v143H0Z"/>
+          <g class="islands"><ellipse cx="92" cy="312" rx="34" ry="9"/><ellipse cx="144" cy="291" rx="19" ry="7"/><ellipse cx="197" cy="279" rx="10" ry="5"/><ellipse cx="252" cy="266" rx="22" ry="7"/><ellipse cx="318" cy="248" rx="12" ry="5"/><ellipse cx="518" cy="238" rx="17" ry="6"/><ellipse cx="572" cy="225" rx="9" ry="4"/></g>
+          <path class="route shadow" d="M82 299C165 277 215 260 285 235S440 211 588 190"/><path class="route" d="M82 299C165 277 215 260 285 235S440 211 588 190"/>
+          <path class="route alt" d="M286 235C340 258 409 270 506 245"/>
+          <g class="ports"><g transform="translate(82 299)"><circle r="7"/><circle r="14"/><text x="-25" y="-22">HANKO</text></g><g transform="translate(286 235)"><circle r="7"/><circle r="14"/><text x="-30" y="-22">HELSINKI</text></g><g transform="translate(506 245)"><circle r="7"/><circle r="14"/><text x="-29" y="27">SKÖLDVIK</text></g><g transform="translate(588 190)"><circle r="7"/><circle r="14"/><text x="-47" y="-22">HAMINAKOTKA</text></g></g>
+          <g class="wind" transform="translate(411 160)"><path d="M0 18h55M38 3l17 15-17 15"/><text x="1" y="-5">SW 12 m/s</text></g>
+        </svg>
+        <div class="map-legend"><span><i class="route-key"></i> Regular route</span><span><i class="port-key"></i> Major harbour</span><span><i class="island-key"></i> Land / islands</span></div>
+      </div>
+    </section>
+
+    <section class="section conditions" id="conditions">
+      <div class="section-heading"><div><div class="eyebrow"><span></span> SEASONAL OUTLOOK</div><h2>Conditions at a glance</h2></div><div class="season-tabs" role="group" aria-label="Choose season"><button data-season="winter" class="active">Winter</button><button data-season="spring">Spring</button><button data-season="summer">Summer</button><button data-season="autumn">Autumn</button></div></div>
+      <p class="section-note">Illustrative planning values for the Gulf of Finland. Connect the listed data feeds for operational use.</p>
+      <div class="condition-grid">
+        <article class="condition-card wind-card"><div class="card-label"><span class="icon">↗</span> WIND</div><div class="big-value"><b data-value="wind">8.2</b><small>m/s</small></div><p>Seasonal mean</p><div class="direction"><span data-value="direction">SW</span><i>↗</i><span><b data-value="windP90">14.6</b> m/s<br><small>P90 intensity</small></span></div></article>
+        <article class="condition-card"><div class="card-label"><span class="icon">≈</span> WAVES</div><div class="big-value"><b data-value="wave">1.4</b><small>m</small></div><p>Significant height · P90</p><div class="spark"><svg viewBox="0 0 250 50"><path d="M0 38C20 30 30 43 48 30S77 7 94 24s27 14 40-3 31-16 44 2 27 13 38-2 23-9 34-17"/><path class="fill" d="M0 38C20 30 30 43 48 30S77 7 94 24s27 14 40-3 31-16 44 2 27 13 38-2 23-9 34-17V50H0Z"/></svg><span><b data-value="waveMax">3.8</b> m<br><small>Seasonal max</small></span></div></article>
+        <article class="condition-card"><div class="card-label"><span class="icon">⇢</span> CURRENT</div><div class="big-value"><b data-value="current">0.32</b><small>m/s</small></div><p>Surface speed · P90</p><div class="current-lines"><i></i><i></i><i></i><span><b data-value="currentMax">0.71</b> m/s<br><small>Seasonal max</small></span></div></article>
+        <article class="condition-card ice-card"><div class="card-label"><span class="icon">✣</span> SEA ICE</div><div class="big-value"><b data-value="ice">42</b><small>%</small></div><p>Concentration · P90</p><div class="ice-bar"><i data-icebar></i></div><div class="scale"><span>0%</span><span>100%</span></div></article>
+      </div>
+    </section>
+
+    <section class="section sample-report" id="sample-report">
+      <div class="section-heading">
+        <div><div class="eyebrow"><span></span> SAMPLE SEASONAL DATASET</div><h2>Four seasons, one report</h2></div>
+        <p>A deterministic demonstration dataset for evaluating the report layout. Values are synthetic—not observations or forecasts.</p>
+      </div>
+      <div class="report-summary">
+        <div><small>STUDY PERIOD</small><b>Sample year</b></div><div><small>SPATIAL GRID</small><b>8 × 5 cells</b></div><div><small>STATISTIC</small><b>Seasonal P90</b></div><div><small>AREA</small><b>Gulf of Finland</b></div>
+      </div>
+      <div class="season-table-wrap">
+        <table class="season-table">
+          <thead><tr><th>Season</th><th>Mean wind</th><th>P90 wind</th><th>P90 wave Hs</th><th>Maximum wave Hs</th><th>P90 current</th><th>P90 sea ice</th><th>Dominant wind</th></tr></thead>
+          <tbody>
+            <tr><td><i class="season-dot winter-dot"></i><b>Winter</b><small>Dec–Feb</small></td><td>8.2 m/s</td><td>14.6 m/s</td><td>1.4 m</td><td>3.8 m</td><td>0.32 m/s</td><td>42%</td><td>SW</td></tr>
+            <tr><td><i class="season-dot spring-dot"></i><b>Spring</b><small>Mar–May</small></td><td>6.7 m/s</td><td>11.8 m/s</td><td>0.9 m</td><td>2.7 m</td><td>0.27 m/s</td><td>8%</td><td>W</td></tr>
+            <tr><td><i class="season-dot summer-dot"></i><b>Summer</b><small>Jun–Aug</small></td><td>5.4 m/s</td><td>9.3 m/s</td><td>0.6 m</td><td>2.1 m</td><td>0.22 m/s</td><td>0%</td><td>SW</td></tr>
+            <tr><td><i class="season-dot autumn-dot"></i><b>Autumn</b><small>Sep–Nov</small></td><td>8.9 m/s</td><td>15.8 m/s</td><td>1.6 m</td><td>4.2 m</td><td>0.35 m/s</td><td>0%</td><td>W</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="heatmap-heading"><div><h3>Seasonal wave-height heatmaps</h3><p>Illustrative P90 significant wave height (m) across a simplified west-to-east Gulf grid.</p></div><div class="heat-legend"><span>0.2</span><i></i><span>2.0+ m</span></div></div>
+      <div class="heatmap-grid" data-heatmaps></div>
+      <div class="harbour-heading"><h3>Sample harbour conditions</h3><p>Seasonal P90 values used to demonstrate the harbour appendix.</p></div>
+      <div class="harbour-table-wrap"><table class="harbour-table">
+        <thead><tr><th>Harbour</th><th>Winter wind / wave</th><th>Spring wind / wave</th><th>Summer wind / wave</th><th>Autumn wind / wave</th></tr></thead>
+        <tbody><tr><td><b>Hanko</b><small>Western entrance</small></td><td>15.2 m/s · 1.8 m</td><td>12.4 m/s · 1.1 m</td><td>9.8 m/s · 0.8 m</td><td>16.5 m/s · 2.0 m</td></tr><tr><td><b>Helsinki</b><small>Central coast</small></td><td>14.1 m/s · 1.3 m</td><td>11.3 m/s · 0.8 m</td><td>8.9 m/s · 0.5 m</td><td>15.3 m/s · 1.5 m</td></tr><tr><td><b>Sköldvik</b><small>Industrial harbour</small></td><td>13.8 m/s · 1.1 m</td><td>11.0 m/s · 0.7 m</td><td>8.6 m/s · 0.5 m</td><td>14.9 m/s · 1.3 m</td></tr><tr><td><b>HaminaKotka</b><small>Eastern gulf</small></td><td>14.5 m/s · 1.2 m</td><td>11.7 m/s · 0.8 m</td><td>9.1 m/s · 0.5 m</td><td>15.6 m/s · 1.4 m</td></tr></tbody>
+      </table></div>
+      <p class="sample-disclaimer"><b>Sample-data notice:</b> These values are deliberately plausible synthetic examples created for report design and software testing. They must not be used for navigation, safety decisions, or scientific conclusions.</p>
+    </section>
+
+    <section class="section fleet" id="fleet">
+      <div class="section-heading"><div><div class="eyebrow"><span></span> OPERABILITY MODEL</div><h2>Risk by vessel class</h2></div><p>Transparent, configurable engineering assumptions—not statutory go / no-go limits.</p></div>
+      <div class="table-wrap"><table><thead><tr><th>Vessel profile</th><th>Draught</th><th>Max speed</th><th>Wind caution / danger</th><th>Wave caution / danger</th><th>Current caution / danger</th><th>Winter outlook</th></tr></thead><tbody>
+        <tr><td><span class="vessel">⛵</span><b>Small fishing</b><small>70 t displacement</small></td><td>2.2 m</td><td>10 kn</td><td><span class="threshold">10</span> / <span class="danger">14 m/s</span></td><td><span class="threshold">1.0</span> / <span class="danger">2.0 m</span></td><td>0.5 / 0.9 m/s</td><td><span class="pill red">HIGH RISK</span></td></tr>
+        <tr><td><span class="vessel">▰</span><b>Coastal cargo</b><small>6,000 t displacement</small></td><td>6.0 m</td><td>13 kn</td><td>14 / 20 m/s</td><td>3.5 / 5.5 m</td><td>0.8 / 1.2 m/s</td><td><span class="pill amber">CAUTION</span></td></tr>
+        <tr><td><span class="vessel">▱</span><b>RoPax</b><small>25,000 t displacement</small></td><td>6.8 m</td><td>22 kn</td><td>16 / 22 m/s</td><td>4.5 / 6.5 m</td><td>1.0 / 1.5 m/s</td><td><span class="pill green">OPERABLE</span></td></tr>
+        <tr><td><span class="vessel">▬</span><b>Tanker</b><small>45,000 t displacement</small></td><td>10.0 m</td><td>15 kn</td><td>15 / 20 m/s</td><td>4.5 / 7.0 m</td><td>0.8 / 1.3 m/s</td><td><span class="pill amber">CAUTION</span></td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="section sources" id="sources">
+      <div class="section-heading"><div><div class="eyebrow"><span></span> PIPELINE ARCHITECTURE</div><h2>One picture, trusted sources</h2></div><p>Forecasts power near-term routing. Reanalysis builds reliable seasonal context.</p></div>
+      <div class="source-grid">
+        <article><span>01</span><b>FMI</b><h3>Operational forecasts</h3><p>HARMONIE wind, WAM waves and hydrodynamic currents for Finnish waters.</p><i>SHORT HORIZON</i></article>
+        <article><span>02</span><b>COPERNICUS</b><h3>Baltic reanalysis</h3><p>Hourly physics, waves, currents and sea ice for statistics and backtesting.</p><i>1993 → PRESENT</i></article>
+        <article><span>03</span><b>EMODnet</b><h3>Bathymetry</h3><p>Depth grids for navigability, under-keel clearance and route cost penalties.</p><i>OGC SERVICES</i></article>
+        <article><span>04</span><b>DIGITRAFFIC</b><h3>Vessels & ports</h3><p>Live AIS locations, vessel metadata, Finnish port calls and winter navigation.</p><i>REAL TIME</i></article>
+        <article><span>05</span><b>OSM</b><h3>Coast & harbours</h3><p>Island labels, coastline geometry and harbour outlines for the map layer.</p><i>OPEN GEODATA</i></article>
+        <article><span>06</span><b>HELCOM</b><h3>Traffic density</h3><p>Historical 1 km vessel-density layers by year, month and ship category.</p><i>2006 → 2024</i></article>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <div><div class="eyebrow light"><span></span> COMPLETE PROJECT RECORD</div><h2>Take the whole analysis with you.</h2><p>The PDF view includes every metric, threshold, source, methodology note and assumption shown here—formatted for A4.</p></div><button class="report-button" type="button" data-print><span>↓</span><b>Download full report</b><small>PRINT-READY PDF · ALL DATA</small></button>
+    </section>
+
+    <section class="print-only methodology"><h2>Methodology & assumptions</h2><div class="print-cols"><div><h3>Processing approach</h3><ol><li>Build a regular 5 km navigation grid across the Gulf of Finland study bounds.</li><li>Mask land and shallow cells using coastline, island, and bathymetry layers.</li><li>Align hourly wind, wave, current, and ice fields to every navigable cell.</li><li>Compute seasonal mean, maximum, P50, P90, and P99 statistics.</li><li>Map AIS tracks to cells and use medoid sequences as regular routes.</li><li>Apply vessel-specific caution and danger thresholds to route costs.</li></ol></div><div><h3>Important limitations</h3><ul><li>Displayed conditions are illustrative until live feeds are connected.</li><li>Vessel particulars are engineering proxies, not vessel certificates.</li><li>Risk bands are planning assumptions, not legal operating limits.</li><li>Digitraffic AIS excludes fishing vessels; HELCOM density is the fallback.</li><li>Operational navigation requires official charts and master judgement.</li></ul></div></div><p class="generated">SeaRoute Finland · Gulf of Finland Routing Intelligence · Generated from the interactive dashboard</p></section>
+  </main>
+  <footer><a class="brand" href="#overview"><span class="brand-mark">S</span><span>SeaRoute <b>Finland</b></span></a><p>Decision support for Finnish waters.</p><span>Planning prototype · Not for navigation</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
